@@ -6,6 +6,7 @@
 }
 body{
     background-color: black;
+    padding-bottom: 40px;
 }
 
 #header{
@@ -43,7 +44,7 @@ nav ul li a{
 
 
 .header-text{
-    margin-top: 40%; /*--these are for web debeloper, AE student--*/
+    margin-top: 30%; /*--these are for web debeloper, AE student--*/
     font-size: 30px;
 }
 
@@ -90,55 +91,70 @@ margin-top: 20px;
 
 .tab-titles{
     display: flex;
-    margin:20px 0 40px; /*20 from top, 0 from left and right, 40 from bottom*/
-    margin: 20px 0px 20px;
-    justify-content: space-between;
-    font-size: 20px;
+    margin: 20px 0 40px;
 }
 
-.tab-titles ul li{
-    display: list-item;
-    margin: 20px 20px;
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position:absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
 }
 
 .tab-contents ul li{
     list-style: none;
-    margin: 20px 0px 20PX;
-    display: list-item;
-}
-
-.tab-contents p{
-    display: flex;
-    margin: 10px 20px;
-}
-
-.tab-contents li{
-    margin: 10px 20px;
+    margin: 10px 0;
 }
 
 .tab-contents ul li span{
-    color: #e04c35;
-    font-size: 30px;
+    color: #b54769;
+    font-size: 14px;
 }
- 
-/*-------------------------------------------work----------------------------------------------------------*/
 
-#work{
+.tab-contents{
+    display: none;
+}
+
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+/*-------------------------------------------project----------------------------------------------------------*/
+
+#project{
     padding: 30px 0; /*--30px from top and bottom and 0 from left and right---*/
     background-color: black;
 }
 
-.work-list{
+.project-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px; /*---space from top--*/
+    margin-top: 30px; /*---space from top--*/
     background-color:black;
     color: white;   /*this is for font color*/ 
 }
 
 
-.work-list div{
+.project-list div{
     background-color: #262626;
     padding: 40px;
     font-size: 13px;
@@ -146,15 +162,15 @@ margin-top: 20px;
     border-radius: 10px;
 }
 
-.work-list div h2{
+.project-list div h2{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.work-list div a{
+.project-list div a{
     text-decoration: none;
-    color: #fff;
+    color: #b54769;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -162,8 +178,10 @@ margin-top: 20px;
 
 /*------------------------------------ -Contact ------------------------------------------------------*/
 .info{
-    font-size: 20px;
+    font-size: 18px;
     color: white;
-    margin: 20px 20px;
+    margin: 40px 30px;
     display: contents;
 }
+
+
