@@ -190,9 +190,3 @@ margin-top: 20px;
     margin: 40px 30px;
     display: contents;
 }
-
-git config --global user.email "120416925+SomayyahMaqsudi@users.noreply.github.com"
-git rebase -i
-git commit --amend --reset-author
-git rebase --continue
-git push
